@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, Arial, sans-serif;
+  letter-spacing: 0.25px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  background: linear-gradient(rgba(60, 60, 60, 0.6), rgba(60, 60, 60, 0.6)),
+    url(../img/fondo.png);
+  background-size: cover;
+  background-position: center;
+  width: 70%;
+  color: #fff;
+  font-size: larger;
+  font-weight: 600;
+  border-radius: 0 0 15px 15px;
+  z-index: 1000;
+}
+
+.seleccion_productos {
+  position: fixed;
+  top: 60px;
+  display: flex;
+  left: 15%;
+  gap: 30px;
+  padding: 10px;
+  width: 70%;
+  background: white;
+  z-index: 999;
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.seleccion_productos a {
+  color: #999484;
+  font-size: 20px;
+  border-bottom: 3px solid transparent;
+}
+.seleccion_productos a.activo {
+  border-bottom: 2px solid #999484;
+}
+
+.seleccion_productos a:hover {
+  border-bottom: 2px solid #999484;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.iconos-izquierda {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.iconos-izquierda i {
+  margin-left: 15px;
+  font-size: 20px;
+  color: #999484;
+}
+
+i {
+  cursor: pointer;
+}
+
+body {
+  padding-top: 120px;
+}
+
+.titulos p {
+  color: #bfbdba;
+  font-size: 12px;
+  margin-left: 28px;
+  margin-bottom: 30px;
+}
+
+.titulos i {
+  color: #8c8c8c;
+  font-size: 21px;
+}
+
+.destacados {
+  margin-top: 20px;
+  display: flex;
+  padding: 10px;
+  margin-left: 15%;
+  width: 50%;
+}
+
+hr {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  color: #fff;
+}
+
+.postre {
+  margin-top: 5px;
+  margin-left: 15%;
+}
+
+.postre img {
+  width: 15%;
+  border-radius: 15px;
+}
+
+.relacion h3 {
+  position: absolute;
+  top: 21%;
+  color: black;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+}
+.relacion p {
+  position: absolute;
+  top: 26%;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.combos {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 15%;
+  width: 50%;
+}
+
+.combos img {
+  width: 15%;
+  border-radius: 15px;
+}
+
+.combos p {
+  position: absolute;
+  font-size: large;
+  top: 25%;
+  left: 15%;
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.pizzas {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 15%;
+  width: 50%;
+  font-size: smaller;
+  color: #999484;
+}
+
+.pizzapormitades {
+  position: relative;
+  margin-top: 5px;
+  margin-left: 15%;
+  width: 50%;
+  left: 10%;
+}
+
+.flecha {
+  position: fixed;
+  bottom: 9%;
+  right: 15%;
+  font-size: 40px;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 50px;
+  text-align: center;
+  color: #47a9af;
+}
+/* Estilos para la sidebar */
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #f0ecec;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  padding-left: 12px;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Cuando la sidebar está abierta */
+.sidebar.open {
+  width: 15.5%;
+  border-radius: 0px 20px 20px 0px;
+}
+#imagen-sidebar {
+  width: 100%;
+  margin-top: -80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#imagen-sidebar img {
+  display: inline;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(80%);
+}
+#imagen-sidebar p {
+  position: absolute;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 600;
+  width: 100%;
+  padding-left: 20px;
+  transform: scaleY(1.2);
+}
