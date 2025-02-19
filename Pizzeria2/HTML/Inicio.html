@@ -7,16 +7,42 @@
   <link rel="icon" href="../IMG/favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="../CSS/pagina_inicio.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 <body>  
     <div class="menu">
       <div class="titulos">
-        <h3><i title="Abrir el menú de navegación" class="bi bi-list" id="menu-toggle"></i> Masakali Pizza - Cristo de Burgos</h3>
+          <h3><i title="Abrir el menú de navegación" class="bi bi-list" id="menu-toggle"></i> Masakali Pizza - Cristo de Burgos</h3>
         <p class="margen">Plaza Cristo de Burgos, 1 - 41003 Sevilla</p>
       </div>
       <div class="iconos-izquierda">
-        <a class="boton-menu"><i class="bi bi-funnel-fill"></i></a>
+        <a class="boton-menu"><i class="bi bi-funnel-fill" style="font-size: 30px; cursor: pointer;" id="openModalBtn"></i></i></a>  
+        
         <a class="boton-menu"><i class="bi bi-search"></i></a>
+      </div>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="closeModalBtn">&times;</span>
+        <h4>Selecciona tus alergias e intolerancias</h6>
+        <div class="intolerancia">
+          <img src="../IMG/intolerancia1.png" alt="intolerancia al trigo">
+          <img src="../IMG/intolerancia2.png" alt="intolerancia a la lactosa">
+          
+          <img src="../IMG/intolerancia4.png" alt="intolerancia a los frutos secos">
+          <img src="../IMG/intolerancia5.jpg" alt="intolerancia al huevo">
+          <img src="../IMG/intolerancia6.png" alt="intolerancia al pescado">
+          <img src="../IMG/intolerancia7.png" alt="intolerancia a los mariscos">
+          <img src="../IMG/intolerancia8.png" alt="intolerancia al maní">
+          <img src="../IMG/intolerancia9.png" alt="intolerancia a la soja">
+          <img src="../IMG/intolerancia10.png" alt="intolerancia a la cebada">
+          <img src="../IMG/intolerancia11.png" alt="intolerancia a la avena">
+          <img src="../IMG/intolerancia12.png" alt="intolerancia al maíz">
+          <img src="../IMG/intolerancia13.png" alt="intolerancia a los lácteos">
+          <img src="../IMG/intolerancia14.png" alt="intolerancia a los colorantes artificiales">
+
+
+        </div>  
       </div>
     </div>
     <div id="sidebar" class="sidebar">
@@ -273,6 +299,7 @@
       </div>
     <a href="#" class="flecha"><i class="bi bi-arrow-up-circle-fill"></i></a>
     <br><br><br><br>
+    
     <script src="../JS/Index.js" defer></script>
   </body>
 </html>

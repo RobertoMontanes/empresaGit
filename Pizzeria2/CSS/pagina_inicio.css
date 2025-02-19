@@ -21,6 +21,7 @@ html {
 a {
   text-decoration: none;
   color: #000;
+  
   cursor: pointer;
 }
 
@@ -45,8 +46,7 @@ a {
 
 .seleccion_productos {
   position: fixed;
-
-  top: 7vh;
+  top: 8vh;
   display: flex;
   left: 15%;
   gap: 2.2vw;
@@ -293,4 +293,47 @@ hr {
 .iconos-izquierda .boton-menu:hover {
   transition: 0.3s;  
   background-color: #6a6f4e;
+}
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 10001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+  padding-top: 13.5%;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 370px;
+  text-align: center;
+  position: relative;
+  z-index: 2; 
+  border-radius: 15px;
+}
+
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+}
+.intolerancia img{
+  max-width: 100px;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }

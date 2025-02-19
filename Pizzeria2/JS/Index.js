@@ -54,4 +54,25 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Obtener el modal y el botón de apertura
+const modal = document.getElementById("modal");
+const openModalBtn = document.getElementById("openModalBtn");
+const closeModalBtn = document.getElementById("closeModalBtn");
+
+// Cuando se hace clic en el icono, se muestra el modal
+openModalBtn.addEventListener("click", function() {
+  modal.style.display = "block";
+});
+
+// Cuando se hace clic en el botón de cerrar, se oculta el modal
+closeModalBtn.addEventListener("click", function() {
+  modal.style.display = "none";
+});
+
+// Cuando se hace clic fuera del modal, también se cierra
+window.addEventListener("click", function(event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
 
