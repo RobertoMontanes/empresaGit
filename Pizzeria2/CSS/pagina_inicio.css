@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -191,7 +195,6 @@ hr {
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
   color: #818181;
   display: block;
   padding-left: 12px;
@@ -208,7 +211,9 @@ hr {
   font-size: 36px;
   margin-left: 50px;
 }
-
+.hr-sidebar {
+  width: 92%;
+}
 .sidebar.open {
   width: 15.5%;
   border-radius: 0px 20px 20px 0px;
@@ -230,15 +235,17 @@ hr {
   filter: brightness(80%);
 }
 #imagen-sidebar p {
-  position: absolute;
+  position: fixed;
   color: #fff;
-  font-size: larger;
+  font-size: 1.3vw;
   font-weight: 600;
-  width: 100%;
-  padding-left: 10%;
+  width: 20%;
+  letter-spacing: 2px;
+  margin-left: 6%;
   transform: scaleY(1.2);
   z-index: 1;
 }
+
 .dropdown {
   position: relative;
 }
@@ -247,7 +254,6 @@ hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 25px;
   color: #818181;
   padding: 12px;
   text-decoration: none;
@@ -264,7 +270,7 @@ hr {
 
 .dropdown-content a {
   padding: 10px;
-  font-size: 20px;
+  font-size: 13px;
   color: #555;
 }
 
@@ -275,16 +281,17 @@ hr {
 .dropdown.open .dropdown-content {
   display: flex;
 }
-.boton-filtro {
+.boton-menu {
   margin-bottom: 60%;
   position: relative;
   right: 25%;
   padding: 5px;
   text-align: center;
+  border-radius: 50%;
 }
 
-.iconos-izquierda .boton-filtro:hover {
-  border-radius: 50%;
+.iconos-izquierda .boton-menu:hover {
+  transition: 0.3s;
+  
   background-color: #6a6f4e;
-  transition: background-color 0.3s, border-radius 0.3s;
 }
