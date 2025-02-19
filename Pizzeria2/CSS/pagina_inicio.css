@@ -128,25 +128,6 @@ hr {
   border-radius: 15px;
 }
 
-.relacion h3 {
-  position: absolute;
-  top: 21%;
-  color: black;
-  padding: 5px;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 40px;
-  color: #fff;
-}
-.relacion p {
-  position: absolute;
-  top: 26%;
-  color: #fff;
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 20px;
-}
-
 .combos {
   position: relative;
   margin-top: 5px;
@@ -205,7 +186,7 @@ hr {
   left: 0;
   background-color: #f0ecec;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0.2s;
   padding-top: 60px;
   z-index: 1000;
 }
@@ -216,12 +197,11 @@ hr {
   font-size: 25px;
   color: #818181;
   display: block;
-  transition: 0.3s;
   padding-left: 12px;
 }
 
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: #000;
 }
 
 .sidebar .close-btn {
@@ -255,11 +235,12 @@ hr {
 #imagen-sidebar p {
   position: absolute;
   color: #fff;
-  font-size: 21px;
+  font-size: larger;
   font-weight: 600;
   width: 100%;
-  padding-left: 20px;
+  padding-left: 10%;
   transform: scaleY(1.2);
+  z-index: 1;
 }
 .dropdown {
   position: relative;
@@ -274,10 +255,6 @@ hr {
   padding: 12px;
   text-decoration: none;
   cursor: pointer;
-}
-
-.dropdown-toggle i {
-  transition: transform 0.3s;
 }
 
 .dropdown-content {
@@ -300,8 +277,4 @@ hr {
 
 .dropdown.open .dropdown-content {
   display: flex;
-}
-
-.dropdown.open .dropdown-toggle i {
-  transform: rotate(180deg);
 }
