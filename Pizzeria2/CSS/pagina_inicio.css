@@ -26,6 +26,7 @@ a {
   left: 50%;
   transform: translateX(-50%);
   padding: 10px;
+  padding-bottom: 30px;
   background: linear-gradient(rgba(60, 60, 60, 0.6), rgba(60, 60, 60, 0.6)),
     url(../img/fondo.png);
   background-size: cover;
@@ -40,27 +41,25 @@ a {
 
 .seleccion_productos {
   position: fixed;
-  top: 60px;
+  top: 7vh;
   display: flex;
   left: 15%;
-  gap: 30px;
-  padding: 10px;
+  gap: 2.2vw;
+  padding: 1vw;
   width: 70%;
-  background: white;
+  background: #fff;
   z-index: 999;
   box-sizing: border-box;
-  margin-top: 20px;
-  padding-top: 20px;
+  margin-top: 1.5vw;
+  padding-top: 2vw;
+  
 }
 .seleccion_productos a {
   color: #999484;
   font-size: 20px;
   border-bottom: 3px solid transparent;
 }
-.seleccion_productos a.activo {
-  border-bottom: 2px solid #999484;
-}
-
+.seleccion_productos a.activo,
 .seleccion_productos a:hover {
   border-bottom: 2px solid #999484;
 }
@@ -78,7 +77,6 @@ a {
 }
 
 .iconos-izquierda i {
-  margin-left: 15px;
   font-size: 20px;
   color: #999484;
 }
@@ -88,7 +86,7 @@ i {
 }
 
 body {
-  padding-top: 120px;
+  padding-top: 10%;
 }
 
 .titulos p {
@@ -115,7 +113,6 @@ hr {
   margin-left: auto;
   margin-right: auto;
   width: 70%;
-  color: #fff;
 }
 
 .postre {
@@ -132,7 +129,7 @@ hr {
   position: relative;
   margin-top: 5px;
   margin-left: 15%;
-  width: 50%;
+  width: 60%;
 }
 
 .combos img {
@@ -277,4 +274,17 @@ hr {
 
 .dropdown.open .dropdown-content {
   display: flex;
+}
+.boton-filtro {
+  margin-bottom: 60%;
+  position: relative;
+  right: 25%;
+  padding: 5px;
+  text-align: center;
+}
+
+.iconos-izquierda .boton-filtro:hover {
+  border-radius: 50%;
+  background-color: #6a6f4e;
+
 }
