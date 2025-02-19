@@ -291,7 +291,6 @@ hr {
 }
 
 .iconos-izquierda .boton-menu:hover {
-  transition: 0.3s;
-  
+  transition: 0.3s;  
   background-color: #6a6f4e;
 }
