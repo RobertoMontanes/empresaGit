@@ -41,6 +41,7 @@ a {
 
 .seleccion_productos {
   position: fixed;
+  
   top: 7vh;
   display: flex;
   left: 15%;
