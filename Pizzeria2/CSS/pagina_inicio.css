@@ -93,7 +93,7 @@ body {
   padding-top: 10%;
 }
 
-.titulos p {
+.titulos .margen {
   color: #bfbdba;
   font-size: 12px;
   margin-left: 28px;
@@ -337,9 +337,11 @@ hr {
   height: 220px;
 }
 .alergias {
+  padding: 1%;
   color: #8d8d8d;
   margin-left: 20px;
-  font-size: 16.5px;
+  font-size: 13px;
+  padding-right: 10%;
   text-align: end;
   margin: 2px 2px 20px 0px;
 }
@@ -364,14 +366,14 @@ hr {
 
 .aviso-alergenos {
   display: flex;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
-  margin: 35px 61px 0;
+  margin: 55px 15px 0;
   color: #8d8d8d;
 }
 #asterisco {
   position: absolute;
-  left: 27%;
+  left: 5%;
   color: red;
 }
 
