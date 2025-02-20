@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//----------------------------MODAL------------------------------------------------
+//----------------------------FILTRO------------------------------------------------
 
 // Obtener el modal y el botón de apertura
 const modal = document.getElementById("modal");
