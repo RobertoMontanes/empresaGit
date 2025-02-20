@@ -7,7 +7,7 @@
   <link rel="icon" href="../IMG/favicon.png" type="image/x-icon" />
   <link rel="stylesheet" href="../CSS/pagina_inicio.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>  
     <div class="menu">
@@ -16,15 +16,15 @@
         <p class="margen">Plaza Cristo de Burgos, 1 - 41003 Sevilla</p>
       </div>
       <div class="iconos-izquierda">
-        <a class="boton-menu"><i class="bi bi-funnel-fill" style="font-size: 30px; cursor: pointer;" id="openModalBtn"></i></i></a>  
+        <a class="boton-menu"><i class="bi bi-funnel-fill" id="openModalBtn"></i></i></a>  
         
-        <a class="boton-menu"><i class="bi bi-search"></i></a>
+        <a class="boton-menu"><i id="search-icon" class="bi bi-search"></i></a>
       </div>
     </div>
     <div id="modal" class="modal">
       <div class="modal-content">
         <span class="close" id="closeModalBtn">&times;</span>
-        <h4>Selecciona tus alergias e intolerancias</h6>
+        <h6 class="alergias">Selecciona tus alergias e intolerancias</h6>
         <div class="intolerancia">
           <img src="../IMG/intolerancia1.png" alt="intolerancia al trigo">
           <img src="../IMG/intolerancia2.png" alt="intolerancia a la lactosa">
@@ -40,11 +40,26 @@
           <img src="../IMG/intolerancia12.png" alt="intolerancia a los granos de sésamo">
           <img src="../IMG/intolerancia13.png" alt="intolerancia al altramuz">
           <img src="../IMG/intolerancia14.png" alt="intolerancia a los moluscos">
-
-
         </div>  
+        
+        <h6 class="aviso-alergenos">
+          
+        <p id="asterisco">*</p>Solo se mostrarán los productos 
+        sin los alérgenos seleccionados
+        </h6>
+
       </div>
     </div>
+    <div id="search-overlay" class="search-overlay">
+      <div class="search-input-container">
+        <i class="bi bi-search search-icon"></i>
+        <input type="text" id="search-input">
+        <p class="buscar-producto">Busca Cualquier producto</p>
+      </div>
+      <i id="back-icon" class="bi bi-arrow-left"></i>
+      
+    </div>
+    <div id="overlay">
     <div id="sidebar" class="sidebar">
       <div id="imagen-sidebar">
         <p>Masakali Pizza - <br> Cristo de Burgos</p>
@@ -64,11 +79,11 @@
         </div>
       </div>
       <hr class="hr-sidebar">
-      <a href="#">Alérgenos</a>
+      <a href="https://www.numier.com/carta-digital/carta/masakali/allergens">Alérgenos</a>
       <hr class="hr-sidebar">
       <a href="Index.html">Ir a pantalla de Inicio</a>
     </div>    
-    
+    </div>
       <div class="seleccion_productos">
         <a href="#combo1">COMBO</a>
         <a href="#medianas1">MEDIANAS</a>
