@@ -109,3 +109,95 @@ searchIcon.addEventListener("click", () => {
 backIcon.addEventListener("click", () => {
   searchOverlay.style.display = "none"; // Oculta el overlay
 });
+
+
+//----------------------------CARRITO------------------------------------------------
+// Elementos del carrito
+let cart = []; // Aquí guardamos los productos añadidos
+const cartIcon = document.getElementById('cart-icon');
+
+// Función para añadir productos al carrito
+document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', function (event) {
+    event.preventDefault();
+    
+    const productName = this.getAttribute('data-product');
+    const productPrice = parseFloat(this.getAttribute('data-price'));
+    
+    // Añadir al carrito
+    cart.push({ name: productName, price: productPrice });
+    
+    // Mostrar el carrito con la cantidad de productos
+    cartIcon.classList.add('active');
+    
+    
+    // Animación de añadir al carrito (puedes personalizarla más)
+    animateCartAddition(this);
+    updateCartIcon();
+  });
+});
+
+// Animación del botón cuando se hace click
+function animateCartAddition(button) {
+  const buttonPosition = button.getBoundingClientRect();
+  const cartIconPosition = cartIcon.getBoundingClientRect();
+  
+  const animationElement = document.createElement('div');
+  animationElement.classList.add('cart-animation');
+  document.body.appendChild(animationElement);
+
+  animationElement.style.left = `${buttonPosition.left + window.scrollX}px`;
+  animationElement.style.top = `${buttonPosition.top + window.scrollY}px`;
+
+  // Animar el movimiento del producto al carrito
+  setTimeout(() => {
+    animationElement.style.left = `${cartIconPosition.left + window.scrollX}px`;
+    animationElement.style.top = `${cartIconPosition.top + window.scrollY}px`;
+    animationElement.style.opacity = '0';
+  }, 10);
+
+  // Eliminar la animación después de un tiempo
+  setTimeout(() => {
+    animationElement.remove();
+  }, 1000);
+}
+
+// Actualizar el número de productos en el carrito
+function updateCartIcon() {
+  cartIcon.innerHTML = `<i class="bi bi-cart-fill"></i> ${cart.length}`;
+}
+
+// Función para agregar producto al carrito
+function agregarAlCarrito(nombre, precio, imagen) {
+  // Obtener el carrito actual desde localStorage
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+  // Crear el objeto de producto
+  const producto = {
+      nombre: nombre,
+      precio: precio,
+      imagen: imagen
+  };
+
+  // Agregar el producto al carrito
+  carrito.push(producto);
+
+  // Guardar el carrito actualizado en localStorage
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+
+  // Actualizar el ícono del carrito (opcional)
+  actualizarIconoCarrito();
+}
+
+// Función para actualizar el ícono del carrito
+function actualizarIconoCarrito() {
+  const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+  const cantidadCarrito = carrito.length;
+  const iconoCarrito = document.getElementById('cart-icon');
+  iconoCarrito.setAttribute('data-count', cantidadCarrito);
+}
+
+// Asegurarse de que el ícono del carrito se actualice al cargar la página
+document.addEventListener('DOMContentLoaded', function() {
+  actualizarIconoCarrito();
+});
