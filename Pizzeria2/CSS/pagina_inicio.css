@@ -138,6 +138,7 @@ hr {
 
 .combos img {
   width: 15%;
+  height: 17vh;
   border-radius: 15px;
 }
 
@@ -185,7 +186,7 @@ hr {
   position: fixed;
   top: 0;
   left: 0;
-  width: 16%; /* Ajusta según lo que necesites */
+  width: 16%; 
   background-color: #f0ecec;
   overflow-x: hidden;
   transform: translateX(-100%);
@@ -437,7 +438,6 @@ hr {
   transform: translateX(-50%);
 }
 
-/* Estilo para el icono del carrito */
 .cart-icon {
   position: fixed;
   bottom: 20px;
@@ -455,15 +455,17 @@ hr {
   color: #f39c12;
 }
 
-/* Estilo para los productos */
 button.add-to-cart {
   background-color: #f39c12;
   color: #fff;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
-  display: flex;
+  position: relative;
+  top: -30px; 
+
   align-items: center;
+  border-radius: 15px;
 }
 
 button.add-to-cart i {
@@ -482,7 +484,6 @@ button.add-to-cart:hover {
   color: #333;
 }
 
-/* Estilo de la animación cuando se añade un producto al carrito */
 .cart-animation {
   position: absolute;
   width: 40px;
@@ -505,7 +506,6 @@ button.add-to-cart:hover {
   }
 }
 
-/* Estilos para el selector de idioma */
 .selector_idioma {
   display: flex;
   justify-content: center;
@@ -530,3 +530,7 @@ button.add-to-cart:hover {
   font-size: 18px;
   color: #000;
 }
+#combo1, #medianas1, #XXL1, #postres1, #bebidas1, #XXLPorMitades1, #helado1 {
+  scroll-margin-top: 200px;
+}
+

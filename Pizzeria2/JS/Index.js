@@ -164,7 +164,7 @@ function animateCartAddition(button) {
 
 // Actualizar el número de productos en el carrito
 function updateCartIcon() {
-  cartIcon.innerHTML = `<i class="bi bi-cart-fill"></i> ${cart.length}`;
+  cartIcon.innerHTML = `${cart.length}`;
 }
 
 // Función para agregar producto al carrito
