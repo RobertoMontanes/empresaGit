@@ -198,10 +198,12 @@ function agregarAlCarrito(nombre, precio, imagen) {
 // Función para actualizar el ícono del carrito
 function actualizarIconoCarrito() {
   const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-  const cantidadCarrito = carrito.length;
+  // Sumar la cantidad de cada producto
+  const cantidadTotal = carrito.reduce((total, producto) => total + (producto.cantidad || 1), 0);
   const iconoCarrito = document.getElementById('cart-icon');
-  iconoCarrito.setAttribute('data-count', cantidadCarrito);
+  iconoCarrito.setAttribute('data-count', cantidadTotal);
 }
+
 
 // Asegurarse de que el ícono del carrito se actualice al cargar la página
 document.addEventListener('DOMContentLoaded', function() {
