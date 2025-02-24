@@ -169,25 +169,31 @@ function updateCartIcon() {
 
 // Función para agregar producto al carrito
 function agregarAlCarrito(nombre, precio, imagen) {
-  // Obtener el carrito actual desde localStorage
+  // Obtener el carrito actual desde localStorage o iniciar un array vacío
   let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-  // Crear el objeto de producto
-  const producto = {
+  // Buscar si el producto ya existe en el carrito
+  const productoExistente = carrito.find(producto => producto.nombre === nombre);
+
+  if (productoExistente) {
+    // Si existe, incrementamos la cantidad
+    productoExistente.cantidad += 1;
+  } else {
+    // Si no existe, lo agregamos con cantidad 1
+    const nuevoProducto = {
       nombre: nombre,
       precio: precio,
-      imagen: imagen
-  };
-
-  // Agregar el producto al carrito
-  carrito.push(producto);
+      imagen: imagen,
+      cantidad: 1
+    };
+    carrito.push(nuevoProducto);
+  }
 
   // Guardar el carrito actualizado en localStorage
   localStorage.setItem('carrito', JSON.stringify(carrito));
-
-  // Actualizar el ícono del carrito (opcional)
   actualizarIconoCarrito();
 }
+
 
 // Función para actualizar el ícono del carrito
 function actualizarIconoCarrito() {
