@@ -25,9 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
 //----------------------------SIDEBAR------------------------------------------------
 
-// Para abrir y cerrar el sidebar
+// Guarda los id`s en variables
 const menuToggle = document.getElementById('menu-toggle');
 const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('overlay');

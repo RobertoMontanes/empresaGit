@@ -186,7 +186,7 @@ hr {
   position: fixed;
   top: 0;
   left: 0;
-  width: 16%; 
+  width: 16%;
   background-color: #f0ecec;
   overflow-x: hidden;
   transform: translateX(-100%);
@@ -198,24 +198,6 @@ hr {
 
 #sidebar.open {
   transform: translateX(0);
-}
-
-#overlay {
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-  z-index: 1000;
-}
-
-#overlay.active {
-  visibility: visible;
-  opacity: 1;
 }
 
 .sidebar a {
@@ -309,6 +291,23 @@ hr {
   border-radius: 50%;
 }
 
+#overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  z-index: 1000;
+}
+
+#overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
 .iconos-izquierda .boton-menu:hover {
   transition: 0.3s;
   background-color: #6a6f4e;
@@ -462,7 +461,7 @@ button.add-to-cart {
   padding: 10px 20px;
   cursor: pointer;
   position: relative;
-  top: -30px; 
+  top: -30px;
 
   align-items: center;
   border-radius: 15px;
@@ -479,7 +478,7 @@ button.add-to-cart:hover {
 .precio {
   font-weight: bold;
   margin-left: 15px;
-  margin-top:  30px;
+  margin-top: 30px;
   font-size: 1.2rem;
   color: #333;
 }
@@ -530,7 +529,12 @@ button.add-to-cart:hover {
   font-size: 18px;
   color: #000;
 }
-#combo1, #medianas1, #XXL1, #postres1, #bebidas1, #XXLPorMitades1, #helado1 {
+#combo1,
+#medianas1,
+#XXL1,
+#postres1,
+#bebidas1,
+#XXLPorMitades1,
+#helado1 {
   scroll-margin-top: 200px;
 }
-
