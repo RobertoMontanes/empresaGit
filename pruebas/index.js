@@ -1,17 +1,10 @@
-function relacionarRegistrosUsuarios(registros){
-    const listado = document.querySelector('.registros-usuarios');
-    registros.forEach(registro => {
-    let fila = document.createElement('div');
-    fila.innerHTML = 
-    `
-    <p>ID: ${registro.id}</p>
-    <p>Nombre: ${registro.nombre}</p>
-    <p>Apellido 1: ${registro.apellido1}</p>
-    <p>Apellido 2: ${registro.apellido2}</p>
-    <p>Edad: ${registro.edad}</p>
-    <hr>
-    `
-    listado.appendChild(fila);
-    });
+function contarVecesQueSeHizoClick(){
+const numero_clicks = document.getElementById('numero-click');
+let contador = 0;
+const boton = document.getElementById('circulo')
+boton.addEventListener('click', function(){
+    contador++;
+    numero_clicks.textContent = contador;
+    
+})
 }
-relacionarRegistrosUsuarios(registros);
